@@ -1,5 +1,5 @@
-# [Name]
-## [Assignment #]
+# Talon Bluemel
+## LAb
 ## [Submission date: MM/DD/YY]
 ## Worked with/sources 
 * example

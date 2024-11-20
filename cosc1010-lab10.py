@@ -1,8 +1,8 @@
-# Your Name Here
+# Talon Bluemel
 # UWYO COSC 1010
-# Submission Date
-# Lab XX
-# Lab Section: 
+# 11-20-24
+# Lab 10
+# Lab Section: 12
 # Sources, people worked with, help given to: 
 # your
 # comments
@@ -16,6 +16,15 @@ from pathlib import Path
 def get_hash(to_hash):
     """You can use """
     return sha256(to_hash.encode('utf-8')).hexdigest().upper()
+
+try:
+    hashed_password = Path('hash').read_text().strip()
+    passwords_file = open(Path('rockyou.txt'), 'r')
+    print(next((password.strip() for password in passwords_file if get_hash(password.strip())
+        == hashed_password), "Password not found"))
+
+except FileNotFoundError:
+    print("File not found")
 
 
 
